@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <title>SoloX | Social Media Downloader</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Outfit', sans-serif;
+        background-color: #050505;
+        color: #ffffff;
+      }
+      
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0f0f0f;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #00f0ff;
+      }
+
+      /* Glowing Animations */
+      @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0px); }
+      }
+      
+      @keyframes glow-pulse {
+        0% { box-shadow: 0 0 5px #00f0ff, 0 0 10px #00f0ff; }
+        50% { box-shadow: 0 0 20px #00f0ff, 0 0 30px #00f0ff; }
+        100% { box-shadow: 0 0 5px #00f0ff, 0 0 10px #00f0ff; }
+      }
+
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+      
+      .bg-grid-pattern {
+        background-image: linear-gradient(to right, #1a1a1a 1px, transparent 1px),
+                          linear-gradient(to bottom, #1a1a1a 1px, transparent 1px);
+        background-size: 40px 40px;
+        mask-image: linear-gradient(to bottom, transparent, black, transparent);
+        -webkit-mask-image: linear-gradient(to bottom, transparent 10%, black 40%, black 70%, transparent 90%);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+</head>
+  <body class="antialiased min-h-screen relative overflow-x-hidden selection:bg-cyan-500 selection:text-black">
+    <div id="root"></div>
+  </body>
+</html>
